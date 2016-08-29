@@ -1,0 +1,54 @@
+<!-- begin header  -->
+<header class="header">
+	<div class="header__inner">
+		<a href="#" class="logo">Sale</a>
+		<div class="header__menu">
+			<nav class="nav">
+				{% set navLinks = [
+					{
+						link: '#',
+						text: 'Одежда'
+					},
+					{
+						link: '#',
+						text: 'New Collection'
+					},
+					{
+						link: '#',
+						text: 'О Нас'
+					},
+					{
+						link: '#',
+						text: 'Контакты'
+					}
+				] %}
+				<ul class="nav__list">
+					{% for item in navLinks %}
+					<li class="nav__item"><a href="{{item.link}}" class="nav__link">{{item.text}}</a></li>
+					{% endfor %}
+				</ul>
+			</nav>
+			<ul class="header__actions">
+				<li>
+					<a href="#">
+						{{mixins.icon('basket')}}
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						{{mixins.icon('search')}}
+					</a>
+				</li>
+			</ul>
+			<ul class="header__list">
+				<li><a href="#">Вход</a></li>
+				<li><a href="#">Регистрация</a></li>
+			</ul>
+			<div class="box-callback">
+				<a href="tel:0441234567" class="box-callback__phone">044 123 45 67</a>
+				<a href="#" class="btn btn_sm">Заказать звонок</a>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- end header -->

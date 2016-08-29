@@ -1,0 +1,46 @@
+<!-- begin info  -->
+<div class="info">
+	<div class="info__number">№ 1234578</div>
+	<div class="info__title">LIGHTWEIGHT NYLON KNITWEAT IN BLACK</div>
+
+	{% set boxes = [
+		{
+			title: 'Description',
+			text: [
+				[
+					'Cras efficitur iaculis sapien, vel tincidunt magna egestas at. Nunc finibus, metus id fermentum. Cras efficitur iaculis sapien, vel tincidunt magna egestas at, vel tincidunt magna egestas at cras effcitur.',
+					'Cras efficitur iaculis sapien, vel tincidunt magna egestas at. Nunc finibus, metus id fermentum.'
+				],
+				[
+					'29% Viscose / 26% Polyester / 25% Wool / 20% Polyamide / Length: 67cm (Size M) / Machine washable / Product number 722170-73'
+				]
+			]
+		},
+		{
+			title: 'Info Brand',
+			text: [
+				[
+					'Cras efficitur iaculis sapien, vel tincidunt magna egestas at. Nunc finibus, metus id fermentum. Cras efficitur iaculis sapien, vel tincidunt magna egestas at, vel tincidunt magna egestas at cras effcitur.',
+					'Cras efficitur iaculis sapien, vel tincidunt magna egestas at. Nunc finibus, metus id fermentum.'
+				]
+			]
+		}
+	] %}
+
+	{% for box in boxes %}
+	<div class="info__box">
+		<div class="info__subtitle">{{box.title}}</div>
+		{% for text in box.text %}
+		<div class="info__text">
+			{% for paragraph in text %}
+			<p>{{paragraph}}</p>
+			{% endfor %}
+		</div>
+		{% endfor %}
+	</div>
+	{% endfor %}
+	<div class="info__link">
+		<p><a href="#">Size Guide</a></p>
+	</div>
+</div>
+<!-- end info -->

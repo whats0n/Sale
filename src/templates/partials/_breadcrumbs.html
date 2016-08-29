@@ -1,0 +1,18 @@
+{% set breadcrumbs = [
+	'Главная',
+	'Одежда',
+	'Платья',
+	'Название товара'
+] %}
+
+<!-- begin breadcrumbs  -->
+<ul class="breadcrumbs">
+	{% for item in breadcrumbs %}
+	{% if loop.last %}
+	<li><a href="#" class="is-active">{{item}}</a></li>
+	{% else %}
+	<li><a href="#">{{item}}</a></li>
+	{% endif %}
+	{% endfor %}
+</ul>
+<!-- end breadcrumbs -->

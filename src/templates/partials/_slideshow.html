@@ -1,0 +1,46 @@
+<!-- begin slideshow  -->
+<div class="slideshow js-slideshow">
+
+	{% set slideshow = [
+		{
+			img: 'img/slide.jpg',
+			thumbnail: 'img/thumbnail.jpg'
+		},
+		{
+			img: 'img/slide.jpg',
+			thumbnail: 'img/thumbnail.jpg'
+		},
+		{
+			img: 'img/slide.jpg',
+			thumbnail: 'img/thumbnail.jpg'
+		},
+		{
+			img: 'img/slide.jpg',
+			thumbnail: 'img/thumbnail.jpg'
+		}
+	] %}
+
+	<!-- begin slideshow__main  -->
+	<div class="slideshow__main js-slideshow-main">
+		{% for slide in slideshow %}
+		<div class="slideshow__slide" style="background-image: url({{slide.img}});">
+			<a href="#" class="btn-search btn-search_white">
+				{{mixins.icon('search')}}
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+	<!-- end slideshow__main -->
+
+	<!-- begin slideshow__thumbnails  -->
+	<div class="slideshow__thumbnails js-slideshow-thumbnails">
+		{% for slide in slideshow %}
+		<div class="slideshow__thumbnail">
+			<div class="slideshow__thumbnail-in" style="background-image: url({{slide.thumbnail}});"></div>
+		</div>
+		{% endfor %}
+	</div>
+	<!-- end slideshow__thumbnails -->
+
+</div>
+<!-- end slideshow -->

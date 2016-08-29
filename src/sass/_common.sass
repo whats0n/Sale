@@ -1,0 +1,154 @@
+//fonts
++font("HarmoniaSansPro Light", HarmoniaSansProCyr-Light)
++font("HarmoniaSansPro Regular", HarmoniaSansProCyr-Regular)
++font("PlayfairDisplay Regular", PlayfairDisplay-Regular)
+
+=hl
+	font-family: "HarmoniaSansPro Light", Arial, sans-serif
+=hr
+	font-family: "HarmoniaSansPro Regular", Arial, sans-serif
+=pr
+	font-family: "PlayfairDisplay Regular", Arial, sans-serif
+
+//common
+body
+	background: #FFF
+	font-size: 16px
+	line-height: 1.3
+	+hl
+	min-width: 1280px
+
+a
+	text-decoration: none
+
+.container
+	max-width: 1440px
+	padding: 30px
+	margin: 0 auto
+	+clr
+
+.content
+	padding: 30px
+	+clr
+
+//btns
+.btn
+	display: inline-block
+	vertical-align: top
+	color: #333743
+	background: none
+	border: 2px solid #333743
+	border-radius: 2px
+	font-size: 13px
+	line-height: 1
+	+hl
+	text-transform: uppercase
+	padding: 16px 12px 17px
+	transition: color 0.25s ease-out, background 0.25s ease-out
+	.no-touch &
+		&:hover
+			background-color: #333743
+			color: #89e0b7
+	&_sm
+		font-size: 12px
+		padding: 7px 12px 8px
+	&_lg
+		width: 100%
+		max-width: 236px
+	&_dark
+		background-color: #333743
+		color: #89e0b7
+
+.btn-search
+	width: 41px
+	height: 41px
+	border: 1px solid rgba(51, 55, 67, 0.8)
+	transition: background 0.25s ease-out, border-color 0.25s ease-out
+	+vertical
+	border-radius: 50%
+	&.btn-search_white
+		border-color: #fff
+		.no-touch &
+			&:hover
+				background: #fff
+				svg
+					fill: #333743
+		svg
+			fill: #fff
+	svg
+		display: inline-block
+		vertical-align: middle
+		fill: #333743
+		transition: fill 0.25s ease-out
+		font-size: 19px
+
+//checkboxes and radio
+.checkbox
+	display: inline-block
+	vertical-align: top
+	position: relative
+	padding-right: 25px
+	+hl
+	color: #9297a3
+	font-size: 0
+	line-height: 25px
+	cursor: pointer
+	&.checkbox_green
+		input:checked + span
+			&:before
+				background-color: #22c26d
+				border-color: #22c26d
+	input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+		&:checked + span
+			&:before
+				background-color: #333743
+				border-color: #333743
+			&:after
+				opacity: 1
+	span
+		display: inline-block
+		vertical-align: top
+		font-size: 14px
+		&:before, &:after
+			content: ""
+			position: absolute
+			transition: 0.25s ease-out
+		&:before
+			top: 8px
+			right: 0
+			width: 12px
+			height: 12px
+			border-radius: 50%
+			border: 1px solid #9297a3
+		&:after
+			top: 11px
+			right: 2px
+			width: 8px
+			height: 7px
+			background: url(../img/check.svg) no-repeat top center
+			background-size: contain
+			opacity: 0
+	&__color
+		width: 10px
+		height: 10px
+		display: inline-block
+		vertical-align: top
+		margin: 7px 11px 0 0
+
+//input
+.input
+	display: inline-block
+	vertical-align: top
+	width: 100%
+	font-size: 18px
+	+hl
+	color: #333743
+	border-bottom: 1px solid #cbcbcb
+	padding: 7px 10px
+	&::placeholder
+		color: #ccc

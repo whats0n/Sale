@@ -1,0 +1,30 @@
+.slideshow
+	padding-right: 135px
+	position: relative
+	width: 47%
+	overflow: hidden
+	float: left
+	&__thumbnails
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		width: 123px
+	&__slide
+		height: 558px
+		.btn-search
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -20px 0 0 -20px
+	&__slide, &__thumbnail-in
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: 50% 15%
+		background-color: #333743
+	&__thumbnail
+		padding: 0 0 13px
+		height: 190px
+		&-in
+			height: 100%
+			cursor: pointer

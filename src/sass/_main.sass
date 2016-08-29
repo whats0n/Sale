@@ -1,0 +1,163 @@
+.header
+	background-color: #fff
+	box-shadow: 0 0 5.9px 0.1px rgba(0, 0, 0, 0.35)
+	&__inner
+		+clr
+		padding: 36px 40px 41px
+		max-width: 1300px
+		margin: 0 auto
+	&__actions
+		float: right
+		font-size: 0
+		padding-left: 18px
+		li
+			margin-left: 24px
+			display: inline-block
+			vertical-align: top
+		a
+			width: 31px
+			height: 31px
+			border: 1px solid rgba(51, 55, 67, 0.8)
+			transition: border-color 0.25s ease-out, background 0.25s ease-out
+			+vertical
+			display: block
+			border-radius: 50%
+			.no-touch &
+				&:hover
+					background-color: #333743
+					border-color: #333743
+					svg
+						fill: #fff
+		svg
+			display: inline-block
+			vertical-align: middle
+			fill: #333743
+			transition: fill 0.25s ease-out
+			font-size: 12px
+		.icon-basket
+			margin: 1px 3px 0 0
+	&__list
+		float: right
+		+hl
+		font-size: 0
+		margin-left: 46px
+		li, a
+			color: #333743
+		li
+			display: inline-block
+			vertical-align: top
+			font-size: 14px
+			line-height: 1
+			padding: 9px 0 8px
+			&:not(:first-child)
+				&:before
+					display: inline-block
+					vertical-align: top
+					content: "/"
+					padding: 0 3px
+		a
+			display: inline-block
+			vertical-align: top
+			color: #333743
+			.no-touch &
+				&:hover
+					text-decoration: underline
+
+.box-callback
+	float: right
+	&__phone
+		display: inline-block
+		vertical-align: top
+		+hl
+		color: #333743
+		.no-touch &
+			&:hover
+				text-decoration: underline
+	.btn, &__phone
+		margin-left: 13px
+
+
+.logo
+	float: left
+	color: #c30408
+	margin-right: 40px
+
+.logo, .nav__link, .box-callback__phone
+	font-size: 18px
+	line-height: 1.38
+	text-transform: uppercase
+	padding: 3px 0 4px
+
+.logo, .nav__link
+	+hr
+
+.nav
+	float: left
+	&__list
+		font-size: 0
+	&__item
+		display: inline-block
+		vertical-align: top
+		padding: 0 16px
+	&__link
+		color: #333743
+		transition: color 0.25s ease-out
+		display: inline-block
+		vertical-align: top
+		.no-touch &
+			&:hover
+				color: #c30408
+
+//footer
+.footer
+	background-color: #e4e6e7
+	text-align: center
+	font-size: 0
+	padding: 60px 0 87px
+	&__nav
+		margin-bottom: 60px
+		li
+			display: inline-block
+			vertical-align: top
+			padding: 0 45px
+		a
+			color: #333743
+			font-size: 24px
+			line-height: 1
+			+hr
+			.no-touch &
+				&:hover
+					text-decoration: underline
+	&__info
+		text-align: right
+		max-width: 700px
+		margin: 0 auto 20px
+	&__col
+		display: inline-block
+		vertical-align: top
+		text-align: center
+		width: 33.33%
+		padding: 0 0 30px
+	&__text
+		font-size: 16px
+		line-height: 21px
+		color: #333743
+		+hl
+
+.social
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: middle
+		padding: 0 30px 20px
+	a, svg
+		display: inline-block
+	a
+		vertical-align: top
+		width: 40px
+		height: 40px
+		+vertical
+	svg
+		font-size: 20px
+		fill: #333743
+		vertical-align: middle

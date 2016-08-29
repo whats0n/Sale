@@ -1,0 +1,65 @@
+<!-- begin footer  -->
+<footer class="footer">
+	<div class="footer__inner">
+
+		{% set footerNav = [
+			{
+				text: 'Одежда'
+			},
+			{
+				text: 'New'
+			},
+			{
+				text: 'Collection'
+			},
+			{
+				text: 'О Нас'
+			},
+			{
+				text: 'Контакты'
+			}
+		] %}
+
+		<ul class="footer__nav">
+			{% for footerNavItem in footerNav %}
+			<li>
+				<a href="#">{{footerNavItem.text}}</a>
+			</li>
+			{% endfor %}
+		</ul>
+		<div class="footer__info">
+			<div class="footer__col">
+				<ul>
+					<li class="footer__text">321 Harrison street</li>
+					<li class="footer__text">San Francisco</li>
+				</ul>
+			</div>
+			<div class="footer__col">
+				<a href="tel:+21323476548" class="footer__text">+213 234 765 48</a>
+			</div>
+		</div>
+
+		{% set social = [
+			{
+				icon: 'fb'
+			},
+			{
+				icon: 'tw'
+			},
+			{
+				icon: 'inst'
+			}
+		] %}
+
+		<ul class="social">
+			{% for socialItem in social %}
+			<li class="social__item">
+				<a href="#" class="social__link">
+					{{mixins.icon(socialItem.icon)}}
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</footer>
+<!-- end footer -->

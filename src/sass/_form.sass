@@ -1,0 +1,67 @@
+.form
+	float: left
+	width: 21%
+	&__inner
+		max-width: 235px
+	&__instock
+		text-align: right
+		margin-bottom: 26px
+	&__subtitle
+		font-size: 13px
+		line-height: 1
+		border-bottom: 1px solid #dbdee5
+		padding: 0 0 8px
+	&__list
+		font-size: 0
+		margin: 0 -20px
+		&_colors
+			padding: 3px 0 40px
+		&_size
+			padding: 3px 0 30px
+			.checkbox
+				padding-left: 5px
+		li
+			display: inline-block
+			vertical-align: top
+			width: 50%
+			padding: 0 20px
+		.checkbox
+			width: 100%
+	&__text
+		padding: 5px 0 55px
+		p
+			padding: 6px 0
+			font-size: 12px
+			line-height: 1.33
+			color: #9297a3
+			a
+				color: #333743
+				text-decoration: underline
+				.no-touch &
+					&:hover
+						text-decoration: none
+	&__btns
+		.btn
+			margin-bottom: 10px
+
+.price
+	font-size: 0
+	padding: 6px 0 28px
+	li
+		display: inline-block
+		vertical-align: top
+		font-size: 22px
+		line-height: 25px
+		position: relative
+		padding: 0 7px 0 3px
+	&__old
+		color: #9297a3
+		&:before
+			content: ""
+			position: absolute
+			bottom: 40%
+			left: 0
+			right: 0
+			border-bottom: 1px solid #333743
+	&__new
+		color: #f28c64

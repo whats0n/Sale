@@ -1,0 +1,92 @@
+.similar
+	max-width: 1260px
+	margin: 0 auto
+	+clr
+	font-size: 0
+	+hl
+	padding: 50px 0
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 20%
+		padding: 0 10px 40px
+	&__top
+		text-align: center
+	&__title
+		color: #333743
+		font-size: 16px
+		text-transform: uppercase
+		margin-bottom: 30px
+	&__label
+		color: #9297a3
+		font-size: 11px
+		line-height: 16px
+		margin-bottom: 4px
+
+.card
+	+hl
+	line-height: 1
+	.no-touch &
+		&:hover
+			.card
+				&__popup
+					opacity: 1
+					transform: translate3d(0,-50%,0)
+	&__link
+		display: block
+	&__more
+		display: none
+	&__img
+		width: 100%
+		padding-bottom: 100%
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		margin-bottom: 19px
+		position: relative
+	&__popup
+		background: #44d3a4
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		text-align: left
+		padding: 22px 15px
+		opacity: 0
+		transform: translate3d(0,-30%,0)
+		transition: 0.35s ease-out
+	&__name
+		font-size: 14px
+		padding-right: 20px
+	&__more
+		font-size: 11px
+		position: relative
+		padding-right: 30px
+		margin-top: 1px
+		svg
+			font-size: 6px
+			fill: #fff
+			position: absolute
+			top: 2px
+			right: 0
+	&__more, &__name
+		text-transform: uppercase
+		display: inline-block
+		vertical-align: top
+		color: #fff
+	&__top
+		+clr
+		margin-bottom: 9px
+	&__title
+		color: #333743
+		font-size: 16px
+		text-transform: uppercase
+		overflow: hidden
+	&__price
+		font-size: 13px
+		padding-left: 20px
+		float: right
+	&__category
+		font-size: 11px
+	&__category, &__price
+		color: #9297a3

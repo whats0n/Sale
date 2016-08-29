@@ -1,0 +1,107 @@
+<!-- begin form  -->
+<div class="form">
+	<form action="/" class="form__inner">
+		<div class="form__instock">
+			<label class="checkbox checkbox_green">
+				<input type="checkbox" checked disabled>
+				<span>В наличии</span>
+			</label>
+		</div>
+
+		{% set form = [
+			{
+				title: 'Price',
+				price: {
+					old: '$78.00',
+					new: '$48.00'
+				}
+			},
+			{
+				title: 'Colors',
+				colors: [
+					{
+						color: '#9fcede',
+						title: 'Blue'
+					},
+					{
+						color: '#333743',
+						title: 'Brown'
+					}
+				]
+			},
+			{
+				title: 'Size',
+				size: [
+					{
+						name: 'S'
+					},
+					{
+						name: 'XL'
+					},
+					{
+						name: 'M'
+					},
+					{
+						name: 'XXL'
+					},
+					{
+						name: 'L'
+					}
+				]
+			},
+			{
+				title: 'Delivery - Free returns',
+				delivery: [
+					'Destination: World  -  Shipping fee: £6 Your order should arrive within 3-4 w/days',
+					'Read more about <a href="#">delivery information</a>'
+				]
+			}
+		] %}
+
+		{% for field in form %}
+		<div class="form__field">
+			<div class="form__subtitle">{{field.title}}</div>
+			{% if field.price %}
+			<ul class="price">
+				<li class="price__old">{{field.price.old}}</li>
+				<li class="price__new">{{field.price.new}}</li>
+			</ul>
+			{% elif field.colors %}
+			<ul class="form__list form__list_colors">
+				{% for color in field.colors %}
+				<li>
+					<label class="checkbox">
+						<i class="checkbox__color" style="background: {{color.color}}"></i>
+						<input type="checkbox">
+						<span>{{color.title}}</span>
+					</label>
+				</li>
+				{% endfor %}
+			</ul>
+			{% elif field.size %}
+			<ul class="form__list form__list_size">
+				{% for size in field.size %}
+				<li>
+					<label class="checkbox">
+						<input type="checkbox">
+						<span>{{size.name}}</span>
+					</label>
+				</li>
+				{% endfor %}
+			</ul>
+			{% elif field.delivery %}
+			<div class="form__text">
+				{% for text in field.delivery %}
+				<p>{{text | safe}}</p>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div>
+		{% endfor %}
+		<div class="form__btns">
+			<button class="btn btn_lg btn_dark">Buy now - $78</button>
+			<button class="btn btn_lg">Купить в один клик</button>
+		</div>
+	</form>
+</div>
+<!-- end form -->
